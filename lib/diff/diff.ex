@@ -43,7 +43,7 @@ defmodule ExAudit.Diff do
 
         case {value_a, value_b} do
           {a, a} ->
-            nil
+            {key, {:not_changed, a}}
 
           {@undefined, b} ->
             {key, {:added, b}}
